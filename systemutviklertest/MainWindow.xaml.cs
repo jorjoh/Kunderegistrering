@@ -1,20 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.Runtime.Remoting;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 
 
@@ -40,11 +28,11 @@ namespace systemutviklertest
         MySqlCommandBuilder cb;
         public MainWindow()
         {
-
+            
             InitializeComponent();
             contactpersoninfoheader.Content = "Oversikt over registrerte kontaktpersoner";
             myconnectionstring = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
-            /*Connection information && variabels*/
+            /*Connection informasjon && variabler*/
             dbconn = new MySqlConnection(myconnectionstring);
             dbconn.Open(); ;
             string sql = "SELECT * FROM kunde;";
@@ -54,9 +42,15 @@ namespace systemutviklertest
             MySqlCommandBuilder cb = new MySqlCommandBuilder(da);
             ds = new DataSet("kunde");
             da.Fill(ds, "kunde");
-            /*End of informations && variabels*/
+            /*Slutt p åinformasjon && variabler*/
+            // Kjører metoder
             filllistboxcustomertype();
             filllistboxcustomercontactperson();
+            /*Definerer noen label-stringverdier på toppen av registrerings-skjemaet*/
+            label16.Content = "Steg: 1";
+            label17.Content = "Steg: 2";
+            label18.Content = "Steg: 3";
+            /*Slutt på string-verdier*/
         }
 
         private void filllistboxcustomertype()
@@ -78,16 +72,14 @@ namespace systemutviklertest
                 {
                     kundetype = datareaderlistbox.GetString("type");
                     listBox.Items.Add(kundetype);
-                   
                 }
-                
                 datareaderlistbox.Close();
             }
             
-            catch (Exception)
+            catch (Exception e)
             {
                 Console.WriteLine("Something went wrong");
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("Something went wrong" + e.ToString());
                 throw;
             }
         }
@@ -110,17 +102,15 @@ namespace systemutviklertest
                 {
                   string  kontaktpersonlastname = datareaderlistbox.GetString("etternavn");
                   string kontaktpersonfirstname = datareaderlistbox.GetString("fornavn");
-                    contactpersons.Items.Add(kontaktpersonlastname + "," + kontaktpersonfirstname);
-
+                  contactpersons.Items.Add(kontaktpersonlastname + "," + kontaktpersonfirstname);
                 }
-
                 datareaderlistbox.Close();
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
                 Console.WriteLine("Something went wrong");
-                MessageBox.Show("Something went wrong");
+                MessageBox.Show("Something went wrong" + e);
                 throw;
             }
         }
