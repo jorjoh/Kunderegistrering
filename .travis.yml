@@ -1,11 +1,2 @@
 language: csharp
 solution: systemutviklertest.sln
-
-script:    # the following commands are just examples, use whatever your build process requires
-  - ./build.sh
-  - ./test.sh
-  - grep "Test Results" build.log
-  
-  install:
-  - sudo apt-get install -y gtk-sharp2
-  - nuget restore systemutviklertest.sln
