@@ -17,3 +17,7 @@ d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\o
 d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\obj\Debug\searchCustomers.g.cs
 d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\obj\Debug\searchCustomers.baml
 d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\obj\Debug\systemutviklertest.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\obj\Debug\Deletecustomer.g.cs
+d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\obj\Debug\Deletecustomer.baml
+d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\obj\Debug\Changedata.g.cs
+d:\documents\visual studio 2015\Projects\systemutviklertest\systemutviklertest\obj\Debug\Changedata.baml

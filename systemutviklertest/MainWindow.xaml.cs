@@ -32,10 +32,13 @@ namespace systemutviklertest
         {
             
             InitializeComponent();
+            /*Setter egendefinert bakgrunnsbilde til applikasjonen*/
             ImageBrush myBrush = new ImageBrush();
             myBrush.ImageSource =
                 new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\wpfbackground.jpg", UriKind.Absolute));
             this.Background = myBrush;
+            /*Slutt på bakgrunnsbilde*/
+
             contactpersoninfoheader.Content = "Oversikt over registrerte kontaktpersoner";
             myconnectionstring = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
             /*Connection informasjon && variabler*/

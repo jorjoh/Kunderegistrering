@@ -23,6 +23,7 @@ namespace systemutviklertest
             myBrush.ImageSource =
                 new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\wpfbackground.jpg", UriKind.Absolute));
             this.Background = myBrush;
+            
         }
 
         private void register_button(object sender, RoutedEventArgs e)
@@ -43,6 +44,24 @@ namespace systemutviklertest
             SearchCustomers sok = new SearchCustomers();
             sok.Show();
             // Gjemmer velkomstskjermen
+            Welcome welcome = new Welcome();
+            welcome.Owner = this;
+            Hide();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Deletecustomer deletecustomer = new Deletecustomer();
+            deletecustomer.Show();
+            Welcome welcome = new Welcome();
+            welcome.Owner = this;
+            Hide();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            Changedata changedata = new Changedata();
+            changedata.Show();
             Welcome welcome = new Welcome();
             welcome.Owner = this;
             Hide();
