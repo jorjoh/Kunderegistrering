@@ -3,6 +3,8 @@ using System.Data;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using MySql.Data.MySqlClient;
 
 
@@ -19,7 +21,7 @@ namespace systemutviklertest
             Application.Current.Shutdown();
         }
 
-        string cs = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
+        //string cs = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
         MySqlConnection dbconn;
         MySqlCommand cmd;
         MySqlDataAdapter da;
@@ -30,6 +32,10 @@ namespace systemutviklertest
         {
             
             InitializeComponent();
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource =
+                new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\wpfbackground.jpg", UriKind.Absolute));
+            this.Background = myBrush;
             contactpersoninfoheader.Content = "Oversikt over registrerte kontaktpersoner";
             myconnectionstring = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
             /*Connection informasjon && variabler*/

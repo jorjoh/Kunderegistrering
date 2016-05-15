@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace systemutviklertest
 {
@@ -17,6 +19,10 @@ namespace systemutviklertest
         public Welcome()
         {
             InitializeComponent();
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource =
+                new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\wpfbackground.jpg", UriKind.Absolute));
+            this.Background = myBrush;
         }
 
         private void register_button(object sender, RoutedEventArgs e)

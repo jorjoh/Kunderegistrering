@@ -2,6 +2,8 @@
 using System.Data;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using MySql.Data.MySqlClient;
 
 
@@ -20,7 +22,7 @@ namespace systemutviklertest
 
         string selectedCustomerString;
         /*Globale database varriabler*/
-        string cs = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
+        //string cs = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
         MySqlConnection dbconn;
         MySqlCommand cmd;
         MySqlDataAdapter da;
@@ -32,6 +34,10 @@ namespace systemutviklertest
         public SearchCustomers()
         {
             InitializeComponent();
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource =
+                new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\wpfbackground.jpg", UriKind.Absolute));
+            this.Background = myBrush;
             // Definerer tekst til labels programatisk
             searchCustomersLabel.Content = "Søk i registrerte kunder fra databasen";
             showcustomer.Content = "Velg kunde og få ut informasjon";

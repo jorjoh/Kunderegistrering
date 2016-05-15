@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:systemutviklertest"
         mc:Ignorable="d"
-        Title="Welcome" Height="300" Width="467.234">
+        Title="Welcome" Height="300" Width="467.234"
+        Background="#77B6ED">
+    
     <Grid>
-        <Button x:Name="button" Content="Registrer" HorizontalAlignment="Left" Margin="71,138,0,0" VerticalAlignment="Top" Width="104" Click="register_button"/>
-        <Button x:Name="button1" Content="Søk" HorizontalAlignment="Left" Margin="292,138,0,0" VerticalAlignment="Top" Width="75" Click="searchcustomers"/>
+        <Button x:Name="button" Content="Registrer" HorizontalAlignment="Left" Margin="97,83,0,0" VerticalAlignment="Top" Width="104" Click="register_button"/>
+        <Button x:Name="button1" Content="Søk" HorizontalAlignment="Left" Margin="246,83,0,0" VerticalAlignment="Top" Width="75" Click="searchcustomers"/>
         <Label x:Name="label" Content="Velkommen til kunderegistrering systemet" HorizontalAlignment="Left" Height="51" Margin="71,27,0,0" VerticalAlignment="Top" Width="296"/>
-
     </Grid>
 </Window>

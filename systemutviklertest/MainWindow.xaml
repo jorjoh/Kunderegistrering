@@ -6,20 +6,21 @@
         xmlns:local="clr-namespace:systemutviklertest"
         mc:Ignorable="d"
         Title="MainWindow" Height="594.627" Width="1038.564">
+
     <Grid Margin="0,0,2,-6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="89*"/>
             <ColumnDefinition Width="254*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="button" Content="Registrer kunde" HorizontalAlignment="Left" Margin="386,431,0,0" VerticalAlignment="Top" Width="124" Click="reg_customer" Height="56" Grid.Column="1"/>
-        <Label x:Name="label" Content="Registrer kunde&#xD;&#xA;" HorizontalAlignment="Left" Margin="455,58,0,0" VerticalAlignment="Top" Height="26" Width="101" Grid.Column="1"/>
+        <Button x:Name="button" Content="Registrer kunde" HorizontalAlignment="Left" Margin="355,409,0,0" VerticalAlignment="Top" Width="124" Click="reg_customer" Height="56" Grid.Column="1"/>
+        <Label x:Name="label" Content="Registrer kunde&#xD;&#xA;" HorizontalAlignment="Left" Margin="455,39,0,0" VerticalAlignment="Top" Height="26" Width="101" Grid.Column="1"/>
         <Label x:Name="label1" Content="Registrer kundetype&#xA;" HorizontalAlignment="Left" Margin="83,55,0,0" VerticalAlignment="Top" Height="26" Width="120"/>
         <Label x:Name="label2" Content="Kontaktpersoner&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Margin="92,37,0,0" VerticalAlignment="Top" Height="24" Width="101"/>
-        <TextBox x:Name="firmanavn" HorizontalAlignment="Left" Height="23" Margin="464,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="adresse" HorizontalAlignment="Left" Height="23" Margin="464,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="postadresse" HorizontalAlignment="Left" Height="23" Margin="464,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="telefon" HorizontalAlignment="Left" Height="23" Margin="464,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-        <TextBox x:Name="fax" HorizontalAlignment="Left" Height="23" Margin="464,202,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="firmanavn" HorizontalAlignment="Left" Height="23" Margin="464,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="adresse" HorizontalAlignment="Left" Height="23" Margin="464,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="postadresse" HorizontalAlignment="Left" Height="23" Margin="464,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="telefon" HorizontalAlignment="Left" Height="23" Margin="464,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBox x:Name="fax" HorizontalAlignment="Left" Height="23" Margin="464,183,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <TextBox x:Name="titel" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="92,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146"/>
         <TextBox x:Name="etternavn" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="92,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146"/>
         <TextBox x:Name="fornavn" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="92,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146"/>
@@ -32,24 +33,24 @@
         <Label x:Name="label6" Content="Direktetelefon" Grid.Column="1" HorizontalAlignment="Left" Margin="8,152,0,0" VerticalAlignment="Top" Height="26" Width="85"/>
         <Label x:Name="label7" Content="Mobiltelefon" Grid.Column="1" HorizontalAlignment="Left" Margin="14,181,0,0" VerticalAlignment="Top" Height="26" Width="78"/>
         <Label x:Name="label8" Content="Epost" Grid.Column="1" HorizontalAlignment="Left" Margin="48,207,0,0" VerticalAlignment="Top" Height="26" Width="39"/>
-        <Label x:Name="label9" Content="Firmanavn" HorizontalAlignment="Left" Margin="394,89,0,0" VerticalAlignment="Top" Height="26" Width="65" Grid.Column="1"/>
-        <Label x:Name="label10" Content="Adresse" HorizontalAlignment="Left" Margin="407,115,0,0" VerticalAlignment="Top" Height="26" Width="52" Grid.Column="1"/>
-        <Label x:Name="label11" Content="Postadresse" HorizontalAlignment="Left" Margin="386,142,0,0" VerticalAlignment="Top" Height="26" Width="73" RenderTransformOrigin="1.016,0.407" Grid.Column="1"/>
-        <Label x:Name="label12" Content="Telefon" HorizontalAlignment="Left" Margin="411,171,0,0" VerticalAlignment="Top" Height="26" Width="48" Grid.Column="1"/>
-        <Label x:Name="label13" Content="Fax" HorizontalAlignment="Left" Margin="432,197,0,0" VerticalAlignment="Top" Height="26" Width="27" Grid.Column="1"/>
-        <Button x:Name="button1" Content="Registrer kontakperson" Grid.Column="1" HorizontalAlignment="Left" Margin="92,253,0,0" VerticalAlignment="Top" Width="130" Click="reg_contactperson" Height="57"/>
+        <Label x:Name="label9" Content="Firmanavn" HorizontalAlignment="Left" Margin="394,70,0,0" VerticalAlignment="Top" Height="26" Width="65" Grid.Column="1"/>
+        <Label x:Name="label10" Content="Adresse" HorizontalAlignment="Left" Margin="407,96,0,0" VerticalAlignment="Top" Height="26" Width="52" Grid.Column="1"/>
+        <Label x:Name="label11" Content="Postadresse" HorizontalAlignment="Left" Margin="386,123,0,0" VerticalAlignment="Top" Height="26" Width="73" RenderTransformOrigin="1.016,0.407" Grid.Column="1"/>
+        <Label x:Name="label12" Content="Telefon" HorizontalAlignment="Left" Margin="411,152,0,0" VerticalAlignment="Top" Height="26" Width="48" Grid.Column="1"/>
+        <Label x:Name="label13" Content="Fax" HorizontalAlignment="Left" Margin="432,178,0,0" VerticalAlignment="Top" Height="26" Width="27" Grid.Column="1"/>
+        <Button x:Name="button1" Content="Registrer kontakperson" Grid.Column="1" HorizontalAlignment="Left" Margin="108,241,0,0" VerticalAlignment="Top" Width="130" Click="reg_contactperson" Height="26"/>
         <TextBox x:Name="customertype" HorizontalAlignment="Left" Height="23" Margin="83,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
         <Label x:Name="label14" Content="Kundetype" HorizontalAlignment="Left" Margin="16,83,0,0" VerticalAlignment="Top" Height="26" Width="67"/>
         <Button x:Name="button3" Content="Registrer kundetype" HorizontalAlignment="Left" Margin="83,128,0,0" VerticalAlignment="Top" Width="113" Click="reg_kundetype" Height="55"/>
-        <Button x:Name="newWindow" Content="Avbryt" HorizontalAlignment="Left" Margin="540,431,0,0" VerticalAlignment="Top" Width="125" Click="abort" RenderTransformOrigin="4.147,0.55" Height="56" Grid.Column="1"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="121" Margin="302,253,0,0" VerticalAlignment="Top" Width="196" SelectionMode="Multiple" Grid.Column="1"/>
+        <Button x:Name="newWindow" Content="Avbryt" HorizontalAlignment="Left" Margin="509,409,0,0" VerticalAlignment="Top" Width="125" Click="abort" RenderTransformOrigin="4.147,0.55" Height="56" Grid.Column="1"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="121" Margin="320,233,0,0" VerticalAlignment="Top" Width="196" SelectionMode="Multiple" Grid.Column="1"/>
         <Label x:Name="succsess" Content="Label" HorizontalAlignment="Left" Margin="45,241,0,0" VerticalAlignment="Top" Height="26" Width="38"/>
-        <Button x:Name="button4" Content="Oppdater kundetyper" HorizontalAlignment="Left" Margin="302,379,0,0" VerticalAlignment="Top" Width="118" Click="filllistboxwithcustomers" RenderTransformOrigin="1.387,6.704" Height="22" Grid.Column="1"/>
+        <Button x:Name="button4" Content="Oppdater kundetyper" HorizontalAlignment="Left" Margin="320,359,0,0" VerticalAlignment="Top" Width="118" Click="filllistboxwithcustomers" RenderTransformOrigin="1.387,6.704" Height="22" Grid.Column="1"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="82" Margin="83,253,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="162"/>
-        <Label x:Name="label15" Content="Oversikt over kundetyper:" HorizontalAlignment="Left" Margin="302,230,0,0" VerticalAlignment="Top" Width="146" Height="26" Grid.Column="1"/>
-        <ListBox x:Name="contactpersons" Grid.Column="1" HorizontalAlignment="Left" Height="121" Margin="508,253,0,0" VerticalAlignment="Top" Width="157" SelectionMode="Multiple"/>
-        <Label x:Name="contactpersoninfoheader" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="504,227,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="updatecontactpersons" Content="Oppdater kontaktpersoner" Grid.Column="1" HorizontalAlignment="Left" Margin="507,379,0,0" VerticalAlignment="Top" Width="149" Click="updatecontactpersons_Click"/>
+        <Label x:Name="label15" Content="Oversikt over kundetyper:" HorizontalAlignment="Left" Margin="320,210,0,0" VerticalAlignment="Top" Width="146" Height="26" Grid.Column="1"/>
+        <ListBox x:Name="contactpersons" Grid.Column="1" HorizontalAlignment="Left" Height="121" Margin="526,233,0,0" VerticalAlignment="Top" Width="157" SelectionMode="Multiple"/>
+        <Label x:Name="contactpersoninfoheader" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="522,207,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="updatecontactpersons" Content="Oppdater kontaktpersoner" Grid.Column="1" HorizontalAlignment="Left" Margin="525,359,0,0" VerticalAlignment="Top" Width="149" Click="updatecontactpersons_Click"/>
         <Label x:Name="label16" Content="Label" HorizontalAlignment="Left" Margin="45,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label17" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label18" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="421,10,0,0" VerticalAlignment="Top"/>
