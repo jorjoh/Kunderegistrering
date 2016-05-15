@@ -20,6 +20,11 @@ namespace systemutviklertest
     /// </summary>
     public partial class Deletecustomer : Window
     {
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Current.Shutdown();
+        }
         string selectedCustomerString;
         /*Globale database varriabler*/
         //string cs = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
@@ -36,7 +41,7 @@ namespace systemutviklertest
             /*Setter egendefinert bakgrunnsbilde til applikasjonen*/
             ImageBrush myBrush = new ImageBrush();
             myBrush.ImageSource =
-                new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\wpfbackground.jpg", UriKind.Absolute));
+                new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\Resources\\wpfbackground.jpg", UriKind.Absolute));
             this.Background = myBrush;
             /*Slutt på bakgrunnsbilde*/
             fillListComboBox();

@@ -36,7 +36,7 @@ namespace systemutviklertest
             InitializeComponent();
             ImageBrush myBrush = new ImageBrush();
             myBrush.ImageSource =
-                new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\wpfbackground.jpg", UriKind.Absolute));
+                new BitmapImage(new Uri("D:\\Documents\\visual studio 2015\\Projects\\systemutviklertest\\Resources\\wpfbackground.jpg", UriKind.Absolute));
             this.Background = myBrush;
             // Definerer tekst til labels programatisk
             searchCustomersLabel.Content = "Søk i registrerte kunder fra databasen";
