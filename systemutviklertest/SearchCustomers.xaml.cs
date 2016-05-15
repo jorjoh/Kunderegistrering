@@ -29,19 +29,25 @@ namespace systemutviklertest
             base.OnClosed(e);
             Application.Current.Shutdown();
         }
-        string cs = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
+
         string selectedCustomerString;
+        /*Globale database varriabler*/
+        string cs = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
         MySqlConnection dbconn;
         MySqlCommand cmd;
         MySqlDataAdapter da;
         DataSet ds;
         String connectionString;
         MySqlCommandBuilder cb;
+        /*Slutt på gloable databasevariabler*/
+
         public SearchCustomers()
         {
             InitializeComponent();
+            // Definerer tekst til labels programatisk
             searchCustomersLabel.Content = "Søk i registrerte kunder fra databasen";
             showcustomer.Content = "Velg kunde og få ut informasjon";
+            // Fyrer av fliicomboboxlist-metoden
             fillListComboBox();
         }
 
@@ -62,42 +68,62 @@ namespace systemutviklertest
 
         private void searchButton(object sender, RoutedEventArgs e)
         {
+            // Connectionstring til databasen
             connectionString = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
+            // Databasevariabel som inneholder connectionstring
             dbconn = new MySqlConnection(connectionString);
+            // åpner databasetilkoblingen
             dbconn.Open();
+            // Sql-string som søker baser på søketekst i tekstboksen
             string sql = "SELECT* FROM kunde WHERE firmanavn LIKE  '%" + sok.Text + "%' OR adresse LIKE '%" + sok.Text + "%' OR postadresse LIKE '%" + sok.Text + "%';";
+            // MySqlCommand som tar sql og dbconn som argument
             cmd = new MySqlCommand(sql, dbconn);
+            // Datadapter som kjører sql
             da = new MySqlDataAdapter(cmd);
+            // Commandbuilder som bygger enten SELECT, INSERT, UPDATE, DELETE setninger
             cb = new MySqlCommandBuilder(da);
+            // Velger tabellen kunde
             DataTable dt = new DataTable("kunde");
+            // Fyller opp dataadapteren med datatable
             da.Fill(dt);
+            // Setter datagrid sitt innhold = det den får ut av tabellen
             allCutomersDataGrid.ItemsSource = dt.DefaultView;
+            // Oppdaterer dt med da
             da.Update(dt);
         }
-
+        // Metode for å fylle opp comboboxen
         private void fillListComboBox()
         {
           try
             {
+                // Definerer connectionStringen
                 connectionString = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
+                // Database variabel som inneholder connectionstringen
                 dbconn = new MySqlConnection(connectionString);
+                // Åpner databasetilkoblingen
                 dbconn.Open();
-
+                // SQL-spørring
                 string sql = "SELECT * FROM kunde;";
+                // SqlCommand som tar string og tilkobling som argument
                 MySqlCommand cmd = new MySqlCommand(sql, dbconn);
+                // Datareader som brukes til å skrive ut alt i tabellen kunder"
                 MySqlDataReader dataReaderComboBox = cmd.ExecuteReader();
+                // While true = skriv ut alle kunder
                 while (dataReaderComboBox.Read())
                 {
+                   // Lager string som får kolonnen med kunder fra databasen
                    string kunde = dataReaderComboBox.GetString(1);
-                    comboBox.Items.Add(kunde);
+                   // Legger til elementene i comboBoxen
+                   comboBox.Items.Add(kunde);
 
                 }
-
+                // Stenger databasetilkoblingen
                 dbconn.Close();
             }
 
             catch (Exception)
             {
+                // Skriver en feilmelding til console hvis noe går sikkerlig "rett vest"
                 Console.WriteLine("Something went wrong");
                 throw;
             }
@@ -105,20 +131,31 @@ namespace systemutviklertest
 
         private void showSelectedCustomer(object sender, RoutedEventArgs e)
         {
+            //Tømmer searchCustomerslabel sitt innhold
             searchCustomersLabel.Content = " ";
-            
+            // Setter valgt kunde sin tekststreng likt comboboksen sin tekst
             selectedCustomerString = comboBox.Text;
+            // Connectionstring mot databasen
             connectionString = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
+            // Variabel som inneholder connectionStringen
             dbconn = new MySqlConnection(connectionString);
-            dbconn.Open(); ;
-
+            //Åpner databasentilkoblingen
+            dbconn.Open();
+            //SQL string som kjøres i databasen
             string sql = "SELECT * FROM kunde WHERE firmanavn ='" + selectedCustomerString + "'; ";
-            MySqlCommand cmd = new MySqlCommand(sql, dbconn);
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            MySqlCommandBuilder cb = new MySqlCommandBuilder(da);
+            //
+            cmd = new MySqlCommand(sql, dbconn);
+            // Dataadapteret utfører kommandoer
+            da = new MySqlDataAdapter(cmd);
+            // CommandBuilder, med utgangspunkt i en SELECT-setning genererer tilhørende kommandoer for innsetting, oppdatering, og sletting.
+            cb = new MySqlCommandBuilder(da);
+            // Definerer ny datatabell og velger feltet kunde fra databasen
             DataTable dt = new DataTable("kunde");
+            // Forteller dataadapteren til å fylle datasettet med dt
             da.Fill(dt);
+            // Seter Datagridet sin datasource til tabellen fra databasem
             selectedCustomerDataGrid.ItemsSource = dt.DefaultView;
+            // Kjører en update som spinner ut informasjonen
             da.Update(dt);
         }
        
@@ -154,9 +191,11 @@ namespace systemutviklertest
 
         private void backToStart(object sender, RoutedEventArgs e)
         {
+            // Avlsutter søkevindet og gjemmer det
             SearchCustomers searchCustomers = new SearchCustomers();
             searchCustomers.Owner = this;
             Hide();
+            //Henter opp igjen velkomstvinduet
             Welcome welcome = new Welcome();
             welcome.Owner = this;
             welcome.Show();
