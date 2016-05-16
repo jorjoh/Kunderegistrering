@@ -1,3 +1,3 @@
 # Kunderegistrering
 
-Enkelt lunderegistreringssystem mot database - Systemutvikleroppgave
+Enkelt kunderegistreringssystem mot database - Systemutvikleroppgave
