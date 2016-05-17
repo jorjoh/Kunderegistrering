@@ -109,6 +109,7 @@ namespace systemutviklertest
                     string poststedstring = dataReaderComboBox.GetString(3);
                     string telefonint = dataReaderComboBox.GetInt32(4).ToString();
                     string faxint = dataReaderComboBox.GetInt32(5).ToString();
+                    string kontaktpersonstring = dataReaderComboBox.GetString(7);
 
                     id.Text = idstring;
                     firmanavn.Text = firmanavnsting;
@@ -116,6 +117,7 @@ namespace systemutviklertest
                     postadresse.Text = poststedstring;
                     telefon.Text = telefonint;
                     fax.Text = faxint;
+                    contactperson.Text = kontaktpersonstring;
 
                 }
                 // Stenger databasetilkoblingen
@@ -142,7 +144,7 @@ namespace systemutviklertest
                dbconn.Open();
                 string sql = "UPDATE kunde SET firmanavn ='" + this.firmanavn.Text + "', adresse ='" + this.adresse.Text +
                              "', postadresse ='" + this.postadresse.Text + "', telefon ='" + this.telefon.Text +
-                             "', fax ='" + this.fax.Text + "' WHERE idkunde ='"+id.Text+"'";
+                             "', fax ='" + this.fax.Text + "', kontaktperson ='" + contactperson.Text + "' WHERE idkunde ='" + id.Text+"'";
                 cmd = new MySqlCommand(sql, dbconn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Query successful, rows updated");

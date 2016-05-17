@@ -5,24 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:systemutviklertest"
         mc:Ignorable="d"
-        Title="Changedata" Height="347.436" Width="779.487">
+        Title="Changedata" Height="399.436" Width="779.487">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="267*"/>
+        </Grid.RowDefinitions>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Width="120" DropDownClosed="ComboBox_OnDropDownClosed" RenderTransformOrigin="0.961,-0.249"/>
-        <TextBox x:Name="firmanavn" HorizontalAlignment="Left" Height="23" Margin="100,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="adresse" HorizontalAlignment="Left" Height="23" Margin="100,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="postadresse" HorizontalAlignment="Left" Height="23" Margin="100,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="telefon" HorizontalAlignment="Left" Height="23" Margin="100,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="fax" HorizontalAlignment="Left" Height="23" Margin="100,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label9" Content="Firmanavn" HorizontalAlignment="Left" Margin="30,69,0,0" VerticalAlignment="Top" Height="26" Width="65"/>
-        <Label x:Name="label10" Content="Adresse" HorizontalAlignment="Left" Margin="43,95,0,0" VerticalAlignment="Top" Height="26" Width="52"/>
-        <Label x:Name="label11" Content="Postadresse" HorizontalAlignment="Left" Margin="22,122,0,0" VerticalAlignment="Top" Height="26" Width="73" RenderTransformOrigin="1.016,0.407"/>
-        <Label x:Name="label12" Content="Telefon" HorizontalAlignment="Left" Margin="47,151,0,0" VerticalAlignment="Top" Height="26" Width="48"/>
-        <Label x:Name="label13" Content="Fax" HorizontalAlignment="Left" Margin="68,177,0,0" VerticalAlignment="Top" Height="26" Width="27"/>
-        <Button x:Name="updatecustomer" Content="Update" HorizontalAlignment="Left" Margin="100,210,0,0" VerticalAlignment="Top" Width="120" Click="updatecustomer_Click" Height="39"/>
-        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="100,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label" Content="id" HorizontalAlignment="Left" Margin="57,43,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Tilbake" HorizontalAlignment="Left" Margin="231,210,0,0" VerticalAlignment="Top" Width="121" Height="39" Click="goBack"/>
+        <TextBox x:Name="firmanavn" HorizontalAlignment="Left" Height="23" Margin="100,20,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="adresse" HorizontalAlignment="Left" Height="23" Margin="100,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="postadresse" HorizontalAlignment="Left" Height="23" Margin="100,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="telefon" HorizontalAlignment="Left" Height="23" Margin="100,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="fax" HorizontalAlignment="Left" Height="23" Margin="100,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label x:Name="label9" Content="Firmanavn" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Height="26" Width="65" Grid.Row="1"/>
+        <Label x:Name="label10" Content="Adresse" HorizontalAlignment="Left" Margin="43,46,0,0" VerticalAlignment="Top" Height="26" Width="52" Grid.Row="1"/>
+        <Label x:Name="label11" Content="Postadresse" HorizontalAlignment="Left" Margin="22,73,0,0" VerticalAlignment="Top" Height="26" Width="73" RenderTransformOrigin="1.016,0.407" Grid.Row="1"/>
+        <Label x:Name="label12" Content="Telefon" HorizontalAlignment="Left" Margin="47,102,0,0" VerticalAlignment="Top" Height="26" Width="48" Grid.Row="1"/>
+        <Label x:Name="label13" Content="Fax" HorizontalAlignment="Left" Margin="68,128,0,0" VerticalAlignment="Top" Height="26" Width="27" Grid.Row="1"/>
+        <Button x:Name="updatecustomer" Content="Oppdater" HorizontalAlignment="Left" Margin="71,233,0,0" VerticalAlignment="Top" Width="120" Click="updatecustomer_Click" Height="39" Grid.Row="1"/>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Height="23" Margin="100,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
+        <Label x:Name="label" Content="id" HorizontalAlignment="Left" Margin="57,43,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Button x:Name="button" Content="Tilbake" HorizontalAlignment="Left" Margin="202,233,0,0" VerticalAlignment="Top" Width="121" Height="39" Click="goBack" Grid.Row="1"/>
         <Label x:Name="label1" Content="Endre kundedata" HorizontalAlignment="Left" Margin="286,10,0,0" VerticalAlignment="Top" Width="137"/>
+        <Label x:Name="label2" Content="Velg kunde" HorizontalAlignment="Left" Margin="26,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.885,0.461"/>
+        <Label x:Name="label3" Content="Kontaktperson" HorizontalAlignment="Left" Margin="8,159,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="contactperson" HorizontalAlignment="Left" Height="51" Margin="100,162,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

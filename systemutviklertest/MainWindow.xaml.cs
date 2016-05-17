@@ -39,7 +39,7 @@ namespace systemutviklertest
             this.Background = myBrush;
             /*Slutt på bakgrunnsbilde*/
 
-            contactpersoninfoheader.Content = "Oversikt over registrerte kontaktpersoner";
+            contactpersoninfoheader.Content = "Registrerte kontaktpersoner";
             myconnectionstring = "Database=gatship; Data Source=localhost;User=root;Password=0DfTAZ;";
             /*Connection informasjon && variabler*/
             dbconn = new MySqlConnection(myconnectionstring);
